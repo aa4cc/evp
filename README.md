@@ -4,7 +4,7 @@ Queue discharge-based emergency vehicle traffic signal preemption simulation in 
 
 ## Content of this repository
 
-This project contains modules to simulate emergency vehicle preemption approach which is based on the model of queue of vehicles (queue discharge) and V2X communication. There are also two SUMO scenarios which demonstrates this approach. See the publication for details: (TODO: add link). 
+This project contains modules to simulate emergency vehicle preemption approach which is based on the model of queue of vehicles (queue discharge) and V2X communication. There are also two SUMO scenarios which demonstrate this approach. See the publication for details: (TODO: add link). 
 
 ### OMNeT++ modules:
 The following modules are implemented and can be found (NED files as well as C++ implementations) in `qdp_veins/src/qdp_veins`.

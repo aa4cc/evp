@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+    <copy file="net_long.net.xml" />
+    <copy file="discharge.rou.xml" />
+    <copy file="vType_passenger.add.xml" />
+    <copy file="emergency.rou.xml" />
+    <copy file="viewsetting.add.xml" />
+    <copy file="det_e2.add.xml" />
+    <copy file="tl_data_settings.add.xml"/>
+    <copy file="det_e1.add.xml"/>
+
+    <copy file="discharge_veins.sumocfg" type="config" />
+</launch>
+

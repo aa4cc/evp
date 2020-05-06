@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/sumoConfiguration.xsd">
+
+	<input>
+		<net-file value="network.net.xml"/>
+		<route-files value="emergency.rou.xml,  public_transport_tram.rou.xml"/>
+		<additional-files value="vType_passenger.add.xml, flowrouter_routes.xml, flowrouter_flows.xml, det_e1.add.xml, det_e2.add.xml, osm_veins.poly.xml, edge_data_settings.add.xml, tl_206_ct100.tll.xml, public_transport.add.xml" />
+	</input>
+	<output>
+<!--        <tripinfo value="output/tripinfo.xml"/>-->
+<!--        <fcd-output value="output/fcd.xml"/>-->
+<!--        <summary value="output/summary.xml"/>-->
+    </output>
+
+    <time>
+	    <begin value="25200"/>
+	    <step-length value="0.1"/>
+	    <end value="25800"/>
+    </time>
+
+    <processing>
+        <collision.action value="teleport"/>
+        <time-to-teleport value="120"/>
+	    <lateral-resolution value="0.4"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+<!--        <log value="output/sim.log"/>-->
+    </report>
+</configuration>

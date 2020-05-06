@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 2_06 --> 
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="2_06" type="static" programID="2_06_basic_preference" offset="0">
+        <phase duration="100" state="rrrrrrrrrrrrGgGG"/>
+    </tlLogic>
+    <tlLogic id="2_06" type="static" programID="2_06_regular" offset="0">
+        <phase duration="41" state="rrrrGGGrrrrrGGGG"/>
+        <phase duration="2"  state="rrrryyrrrrrrGGGG"/>
+        <phase duration="1"  state="rrrryyrrrrrrGGrr"/>
+        <phase duration="4"  state="rrrrrrrrrrrrGGrr"/>
+        <phase duration="7"  state="GrrrrrrrrrrrGGrr"/>
+        <phase duration="3"  state="Grrrrrrrrrrryyrr"/>
+        <phase duration="3"  state="Grrrrrrrrrrrrrrr"/>
+        <phase duration="31" state="GGGgrrrGGGggrrrr"/>
+        <phase duration="3"  state="yyyyrrryyyyyrrrr"/>
+        <phase duration="3"  state="rrrrrrrrrrrrrrrr"/>
+        <phase duration="2"  state="rrrrrrGrrrrrrrGG"/>
+    </tlLogic>
+</additional>

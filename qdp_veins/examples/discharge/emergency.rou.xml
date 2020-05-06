@@ -1,0 +1,42 @@
+<routes>
+    <!-- vType definitions -->
+	<vType id="EMERGENCY" vClass="emergency" guiShape="emergency" speedFactor="1.5">
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+
+    <!--<vType id="EMERGENCY_AMB"  vClass="emergency" length="6.5" width="2.1" height="2.86" speedFactor="1.5" guiShape="emergency" minGap="0.8" laneChangeModel="SL2015" lcCooperative="0.0" lcPushy="1" lcSpeedGain="10"  lcImpatience="1" carFollowModel="IDM" latAlignment="arbitrary" minGapLat="0.01" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10" >
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+    </vType>-->
+    <vType id="EMERGENCY_AMB" vClass="emergency" guiShape="emergency" maxSpeed="13.9" speedFactor="1.5" carFollowModel="IDM">
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+    </vType>
+	<vType id="EMERGENCY_FIRE"  vClass="emergency" length="7.4" width="2.5" height="3.25" speedFactor="1.5" guiShape="firebrigade" minGap="0.8" laneChangeModel="SL2015" lcCooperative="0.0" lcPushy="1" lcSpeedGain="10"  lcImpatience="1" carFollowModel="Krauss" latAlignment="arbitrary" minGapLat="0.01" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10" >
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+    <vType id="EMERGENCY_POL" vClass="emergency" length="4.3" width="1.8" height="1.5" speedFactor="1.5" guiShape="police" minGap="0.8" laneChangeModel="SL2015" lcCooperative="0.0" lcPushy="1" lcSpeedGain="10"  lcImpatience="1" carFollowModel="Krauss" latAlignment="arbitrary" minGapLat="0.01" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10">
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+    <!-- modifications for opposite lane simulations --> 
+	<vType id="EMERGENCY_AMB_OPPOSITE"  vClass="emergency" length="6.5" width="2" height="2.86" speedFactor="1.5" guiShape="emergency" minGap="0.8" laneChangeModel="LC2013" lcOpposite="10" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10" >
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+	<vType id="EMERGENCY_FIRE_OPPOSITE"  vClass="emergency" length="7.4" width="2.5" height="3.25" speedFactor="1.5" guiShape="firebrigade" minGap="0.8" laneChangeModel="LC2013" lcOpposite="10" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10" >
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+    <vType id="EMERGENCY_POL_OPPOSITE" vClass="emergency" length="4.3" width="1.8" height="1.5" speedFactor="1.5" guiShape="police" minGap="0.8" laneChangeModel="LC2013" lcOpposite="10" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10">
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+
+    <!-- routes definitions -->
+    <route id="emergency_route_0" edges="A_B B_C"/>
+    <!--<trip id="emergency_trip_0" type="EMERGENCY_AMB" depart="25800" to="221128579#1"/>--> 
+    <vehicle id="emergency_01" type="EMERGENCY_AMB" depart="200" departSpeed="max" route="emergency_route_0"/>
+</routes>

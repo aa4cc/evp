@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+    <copy file="network.net.xml" />
+    <copy file="public_transport.add.xml" />
+    <copy file="public_transport_tram.rou.xml" />
+	<copy file="tl_206_ct100.tll.xml"/>
+    <copy file="flowrouter_flows.xml" />
+    <copy file="flowrouter_routes.xml" />
+    <copy file="vType_passenger.add.xml" />
+    <copy file="emergency.rou.xml" />
+    <copy file="osm_veins.poly.xml" />
+    <copy file="det_e1.add.xml" />
+    <copy file="det_e2.add.xml" />
+    <copy file="edge_data_settings.add.xml" />
+    <seed value="42" />
+
+    <copy file="config.sumocfg" type="config" />
+</launch>
+

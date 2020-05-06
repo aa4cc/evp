@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <vType id="PASSENGER_MOD"  vClass="passenger" minGap="2.5" length="4.3" width="1.8" height="1.5" carFollowModel="IDM">
+        <!--<param key="has.fcd.device" value="true"/>-->
+	</vType>
+</additional>

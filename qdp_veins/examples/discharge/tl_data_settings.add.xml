@@ -1,0 +1,3 @@
+<additional>
+    <timedEvent type="SaveTLSSwitchStates" source="B" dest="/home/obrusvit/Tools/sumo-workspace/discharge_time_experiments/tl_switch_data.xml"/>
+</additional>

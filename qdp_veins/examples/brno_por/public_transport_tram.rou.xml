@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WORKING DAYS -->
+<!-- generated on Mon 18 Feb 2019 10:58:22 CET by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="brno_v5.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="brno_v5.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<flows>
+    <interval begin="14400" end="86400">
+        <!-- 4:00 - 5:00 -->
+        <flow id="trams_basic_north_to_south" type="TRAM" from="328042387#1" to="328165076#1" number="200">
+            <stop busStop="tram_porici_out" duration="20"/>
+        </flow>
+        <flow id="trams_basic_south_to_north" type="TRAM" from="-639397535" to="-328042384" number="200">
+            <stop busStop="tram_porici_in" duration="20"/>
+        </flow>
+    </interval>
+
+</flows>

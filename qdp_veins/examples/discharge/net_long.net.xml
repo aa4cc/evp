@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu 25 Apr 2019 17:23:49 CEST by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="net_long.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="net_long.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<net version="1.1" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-800.00,0.00,500.00,0.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":B_0" function="internal">
+        <lane id=":B_0_0" index="0" speed="13.89" length="0.10" shape="0.00,-1.60 0.00,-1.60"/>
+    </edge>
+
+    <edge id="A_B" from="A" to="B" priority="-1" length="800.00">
+        <lane id="A_B_0" index="0" speed="13.89" length="800.00" shape="-800.00,-1.60 0.00,-1.60"/>
+    </edge>
+    <edge id="B_C" from="B" to="C" priority="-1" length="500.00">
+        <lane id="B_C_0" index="0" speed="13.89" length="500.00" shape="0.00,-1.60 500.00,-1.60"/>
+    </edge>
+
+    <tlLogic id="B" type="static" programID="0" offset="0">
+        <phase duration="120" state="r"/>
+    </tlLogic>
+
+    <junction id="A" type="dead_end" x="-800.00" y="0.00" incLanes="" intLanes="" shape="-800.00,0.00 -800.00,-3.20"/>
+    <junction id="B" type="traffic_light" x="0.00" y="0.00" incLanes="A_B_0" intLanes=":B_0_0" shape="0.00,0.00 0.00,-3.20 0.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="C" type="dead_end" x="500.00" y="0.00" incLanes="B_C_0" intLanes="" shape="500.00,-3.20 500.00,0.00"/>
+
+    <connection from="A_B" to="B_C" fromLane="0" toLane="0" via=":B_0_0" tl="B" linkIndex="0" dir="s" state="O"/>
+
+    <connection from=":B_0" to="B_C" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

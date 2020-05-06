@@ -1,0 +1,118 @@
+file 160625 1588768028                                          
+version 2
+run General-0-20200506-14:27:02-51776
+attr configname General
+attr datetime 20200506-14:27:02
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network BrnoPorici
+attr processid 51776
+attr repetition 0
+attr replication #0
+attr resultdir veins-runall-output
+attr runnumber 0
+attr seedset 42
+param *.playgroundSizeX 1800m
+param *.playgroundSizeY 600m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.world.useTorus false
+param *.world.use2D false
+param *.manager.updateInterval 0.1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.firstStepAt 25200s
+param *.manager.moduleType "\"EMERGENCY_AMB=org.car2x.veins.nodes.Car TRAM=org.car2x.veins.nodes.Car BUS=org.car2x.veins.nodes.Car TROLLEYBUS=org.car2x.veins.nodes.Car *=0\""
+param *.manager.moduleName "\"EMERGENCY_AMB=emergNode TRAM=tramNode BUS=busNode TROLLEYBUS=trolleyNode *=0\""
+param *.manager.moduleDisplayString "\"EMERGENCY_AMB='i=emergency' TRAM='i=tram' BUS='i=bus' TROLLEYBUS='i=trolley' *='i=veins/node/car;is=vs'\""
+param *.manager.autoShutdown true
+param *.manager.margin 25
+param *.manager.launchConfig "xmldoc(\"brno_porici.launchd.xml\")"
+param *.manager.trafficLightModuleType "\"org.car2x.veins.nodes.TrafficLight\""
+param *.manager.trafficLightModuleName "\"trafficLight\""
+param *.manager.trafficLightModuleDisplayString "\"i=trafficlight\""
+param *.manager.trafficLightFilter "\"2_06\""
+param *.trafficLight[*].mobility.x 0
+param *.trafficLight[*].mobility.y 0
+param *.trafficLight[*].mobility.z 3
+param *.trafficLight[*].applType "\"QdpTrafficLightApp\""
+param *.trafficLight[*].logicType "\"QdpTrafficLightLogic\""
+param *.trafficLight[*].appl.headerLength "80 bit"
+param *.trafficLight[*].appl.dataOnSch true
+param *.trafficLight[*].appl.firstStepAt 25200s
+param *.trafficLight[*].appl.approachRoadID "\"-4463914#2\""
+param *.trafficLight[*].appl.approachDetIDs "\"2_06_e2_east_0 2_06_e2_east_1\""
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.carNode[*].applType "\"MyVeinsApp\""
+param *.carNode[*].appl.sendBeacons false
+param *.tramNode[*].applType "\"ForwarderAppl\""
+param *.tramNode[*].appl.sendBeacons false
+param *.busNode[*].applType "\"ForwarderAppl\""
+param *.busNode[*].appl.sendBeacons false
+param *.trolleyNode[*].applType "\"ForwarderAppl\""
+param *.trolleyNode[*].appl.sendBeacons false
+param *.emergNode[*].applType "\"EmergencyAppl\""
+param *.emergNode[*].veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+param *.emergNode[*].veinsmobility.x 0
+param *.emergNode[*].veinsmobility.y 0
+param *.emergNode[*].veinsmobility.z 1.895
+param *.emergNode[*].veinsmobility.accidentCount 0
+param *.emergNode[*].veinsmobility.setHostSpeed true
+param *.tramNode[*].veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+param *.tramNode[*].veinsmobility.x 0
+param *.tramNode[*].veinsmobility.y 0
+param *.tramNode[*].veinsmobility.z 1.895
+param *.tramNode[*].veinsmobility.accidentCount 0
+param *.tramNode[*].veinsmobility.setHostSpeed true
+param *.busNode[*].veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+param *.busNode[*].veinsmobility.x 0
+param *.busNode[*].veinsmobility.y 0
+param *.busNode[*].veinsmobility.z 1.895
+param *.busNode[*].veinsmobility.accidentCount 0
+param *.busNode[*].veinsmobility.setHostSpeed true
+param *.trolleyNode[*].veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+param *.trolleyNode[*].veinsmobility.x 0
+param *.trolleyNode[*].veinsmobility.y 0
+param *.trolleyNode[*].veinsmobility.z 1.895
+param *.trolleyNode[*].veinsmobility.accidentCount 0
+param *.trolleyNode[*].veinsmobility.setHostSpeed true
+
+vector 0 BrnoPorici.tramNode[0].veinsmobility posx ETV
+vector 1 BrnoPorici.tramNode[0].veinsmobility posy ETV
+vector 2 BrnoPorici.tramNode[1].veinsmobility posx ETV
+vector 3 BrnoPorici.tramNode[1].veinsmobility posy ETV
+vector 4 BrnoPorici.tramNode[0].veinsmobility speed ETV
+vector 5 BrnoPorici.tramNode[1].veinsmobility speed ETV
+vector 6 BrnoPorici.tramNode[0].veinsmobility acceleration ETV
+vector 7 BrnoPorici.tramNode[0].veinsmobility co2emission ETV
+vector 8 BrnoPorici.tramNode[1].veinsmobility acceleration ETV
+vector 9 BrnoPorici.tramNode[1].veinsmobility co2emission ETV
+7	5172 16801 9 1373 25200.3 25264.3 641 0.973 5.3442903479193 1254.2506210826 3165.8631866771
+6	21973 10329 9 1373 25200.3 25264.3 641 -3 1 137.9 485.81951248514
+4	32302 11872 7 1373 25200.2 25264.3 642 0 13.89 4061.64 47793.88197931
+1	44174 19120 5 1373 25200.1 25264.3 643 45.971552502633 436.76210844605 100245.95095802 23080278.072252
+0	63294 19165 5 1373 25200.1 25264.3 643 937.30641796141 1012.3715584545 626775.91999184 611318665.31312
+9	82459 16930 9 1394 25200.3 25265.3 651 0.973 5.3442903479193 1281.4249361291 3301.448673201
+8	99389 10514 9 1394 25200.3 25265.3 651 -3 1 100 651.57228733459
+5	109903 12222 7 1394 25200.2 25265.3 652 0 13.89 4100.7 47334.277026087
+3	122125 19039 5 1394 25200.1 25265.3 653 25.693671505938 417.68527191523 112266.71763856 30529045.262582
+2	141164 19460 5 1394 25200.1 25265.3 653 931.84438723843 1015.5754350574 638064.78034687 623987931.95671
+

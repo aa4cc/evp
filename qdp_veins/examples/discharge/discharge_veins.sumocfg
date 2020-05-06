@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="net_long.net.xml"/>
+        <route-files value="discharge.rou.xml, emergency.rou.xml"/>
+        <additional-files value="vType_passenger.add.xml, det_e1.add.xml, det_e2.add.xml, tl_data_settings.add.xml"/>
+        <gui-settings-file value="viewsetting.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo value="/home/obrusvit/Tools/sumo-workspace/discharge_time_experiments/sumo_output_tripinfo.xml"/>
+        <fcd-output value="/home/obrusvit/Tools/sumo-workspace/discharge_time_experiments/sumo_output_fcd.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <report>
+        <xml-validation value="never"/>
+        <xml-validation.net value="never"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>

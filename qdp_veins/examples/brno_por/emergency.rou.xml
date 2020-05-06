@@ -1,0 +1,19 @@
+<routes>
+    <!-- vType definitions -->
+	<vType id="EMERGENCY_AMB" vClass="emergency" guiShape="emergency" speedFactor="1.5">
+		<param key="has.bluelight.device" value="true"/>
+		<param key="has.fcd.device" value="true"/>
+	</vType>
+    <!-- <vType id="EMERGENCY_AMB"  vClass="emergency" length="6.5" width="2.1" height="2.86" speedFactor="1.5" guiShape="emergency" minGap="0.8" laneChangeModel="SL2015" lcCooperative="0.0" lcPushy="1" lcSpeedGain="10"  lcImpatience="1"  carFollowModel="IDM" latAlignment="arbitrary" minGapLat="0.01" jmIgnoreKeepClearTime="1" jmDriveAfterRedTime="300" jmDriveRedSpeed="10" > -->
+		<!-- <param key="has.bluelight.device" value="true"/> -->
+		<!-- <param key="has.fcd.device" value="true"/> -->
+    <!-- </vType> -->
+
+    <!-- routes definitions -->
+    <route id="ev_route_east_to_west" edges="30798838#0 -4463914#5 -4463914#4.502 -4463914#2 -gneE39 -226151681 -226151681.34 -226151681#1 226151680#0"/> 
+    <route id="ev_route_west_to_east" edges="137307547#0 226151681#0 gneE41 -gneE38 4463914#3 4463914#4 22733769"/>
+
+    <!-- 25500s = 7:05 AM -->
+    <!-- <vehicle id="emergency_01" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_west_to_east"/> -->
+    <vehicle id="emergency_02" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_east_to_west"/>
+</routes>

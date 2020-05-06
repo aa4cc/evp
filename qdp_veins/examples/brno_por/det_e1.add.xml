@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Fri 22 Feb 2019 14:56:12 CET by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="brno.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="brno.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- 2.06 -->
+    <e1Detector id="2.06_DS2" lane="221128579#1_0" pos="1.76" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <!-- DS6 DS7 -->
+    <!--<e1Detector id="2.06_DS6" lane="-226151681.34_1" pos="20.00" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DS7" lane="-226151681.34_0" pos="20.00" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>-->
+    <e1Detector id="2.06_DVA1" lane="gneE32_0" pos="55.42" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVA2" lane="gneE37_1" pos="3.68" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVB1" lane="-4463914#2_0" pos="37.74" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVB2" lane="-4463914#2_1" pos="37.69" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVB3" lane="-4463914#2_2" pos="37.88" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVC1" lane="-16232970_0" pos="20.14" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVC2" lane="-16232970_1" pos="20.25" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVD1" lane="gneE41_0" pos="31.95" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVD2" lane="gneE41_1" pos="31.95" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+    <e1Detector id="2.06_DVD3" lane="gneE41_2" pos="31.96" freq="600.00" file="output_det_e1.xml" friendlyPos="1"/>
+</additional>

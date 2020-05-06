@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Mon 18 Feb 2019 16:30:53 CET by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="brno_v5.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="brno_v5.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <vType id="BUS" vClass="bus" color="orange" guiShape="bus"/>
+    <vType id="TRAM" vClass="tram" color="yellow"/>
+    <vType id="TROLLEYBUS" vClass="bus" color="blue"/>
+    <busStop id="tram_porici_in" lane="328042389_0" lines="2, 5, 6" startPos="5.73" endPos="25.73"/>
+    <busStop id="tram_porici_out" lane="-328042389_0" lines="2, 5, 6" startPos="15.52" endPos="35.52"/>
+</additional>

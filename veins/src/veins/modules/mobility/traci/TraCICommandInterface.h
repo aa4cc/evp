@@ -356,6 +356,9 @@ public:
 
         int getLastStepVehicleNumber();
 
+        // [obrusvit's addition]
+        int getJamLengthVehicle();
+
     protected:
         TraCICommandInterface* traci;
         TraCIConnection* connection;

@@ -25,6 +25,7 @@ Realistic scenario of one major intersection in the city of Brno, the Czech repu
 TODO gif
 TODO video of real experiment
 
+If you decide to use this repository or parts of it, consider citing (TODO: add link). The experiment conducted in real traffic is documented in the following video: <https://drive.google.com/open?id=1IjWLiKupIz3QcSHucnmZGD9VQ-uWFXWS>.
 
 ## How to run simulations from this repository ##
 
@@ -37,7 +38,49 @@ The repository was started using Cookiecutter for Veins (see <https://github.com
 - OMNeT++ 5.5.1 (see <https://omnetpp.org/>)
 - SUMO 1.4.0 (see <https://sumo.dlr.de/docs/>), tested with 1.5.0 and it should work also with 1.6.0
 
+### Modifications to scenarios ###
 You can change some settings to see different simulation runs:
-TODO code in omnetpp.ini
 
-If you decide to use this repository or parts of it, consider citing (TODO: add link). The experiment conducted in real traffic is documented in the following video: <https://drive.google.com/open?id=1IjWLiKupIz3QcSHucnmZGD9VQ-uWFXWS>.
+#### discharge
+1) set different `number` of cars in the queue in `qdp_veins/examples/discharge/discharge.rou.xml`
+```xml
+<flow id="flow0" type="PASSENGER_MOD" route="route0" begin="0" period="0.1" number="13" departSpeed="max"/>
+```
+
+#### brno_por
+1) change time of `depart` of emergency vehicle to different time of the day. Change must be reflected in `qdp_veins/examples/brno_por/emergency.rou.xml`:
+```xml
+<!-- 25500s = 7:05 AM -->
+<vehicle id="emergency_01" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_west_to_east"/>
+```
+You should also change the simulation start and end in `qdp_veins/examples/brno_por/omnetpp.ini`. Sensible setting is to start 5 minutes before the departure and end 5 minutes after:
+```
+*.manager.firstStepAt = 25200s
+sim-time-limit = 25800s 
+```
+2) road of emergency vehicle. There are two roads available. Setting must be in `qdp_veins/examples/brno_por/emergency.rou.xml`: 
+```xml
+<!-- 25500s = 7:05 AM -->
+<!-- <vehicle id="emergency_01" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_west_to_east"/>-->
+<vehicle id="emergency_02" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_east_to_west"/>
+```
+and in `qdp_veins/examples/brno_por/omnetpp.ini`:
+```
+### For emergency vehicle to approach from the West side:
+#*.trafficLight[*].appl.approachRoadID = "gneE41"
+#*.trafficLight[*].appl.approachDetIDs = "2_06_e2_west_0 2_06_e2_west_1"  # two detectors
+
+### For emergency vehicle to approach from the East side:
+*.trafficLight[*].appl.approachRoadID = "-4463914#2"
+*.trafficLight[*].appl.approachDetIDs = "2_06_e2_east_0 2_06_e2_east_1"  # two detectors
+
+```
+
+#### both
+you might want to try with different `desired_speed` of emergency vehicle (or v_op in publication). Change in `qdp_veins/src/qdp_veins/QdpAlgorithmCalculation.h`:
+```c++
+const double desired_speed = 70/3.6;    // desired speed of emergency vehicle [m/s]
+```
+
+### Usage of these modules in different scenarios ###
+TODO description

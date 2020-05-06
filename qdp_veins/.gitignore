@@ -17,3 +17,5 @@ examples/**/.tkenvrc
 examples/**/.qtenvrc
 examples/**/.cmdenv-log
 examples/**/valgrind.out
+
+examples/**/veins-runall-output/*

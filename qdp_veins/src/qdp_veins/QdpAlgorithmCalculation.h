@@ -17,7 +17,7 @@ const double L_hn = 18.7;               // saturation gap between vehicles [m]
 const double q_ns = 0.5208;             // vehicle discharge speed [veh/s]
 const double t_sw = 11.0;               // minimal time necessary to get back to the current phase if the phase is switched at this very moment [s]
 const double t_min = 10.0;              // minimal time of green phase (green on main road cannot be shorter than t_min) [s]
-const double t_conservative = 0.0;      // time added to preference start, to make it more conservative [s]
+const double t_conservative = 0.0;      // time added to preemption start, to make it more conservative [s]
 
 double linApproxQueueDischarge(int num_vehicles, double t);
 double calc_TA(double distance, double speed = desired_speed);

@@ -18,12 +18,12 @@ Files for SUMO can be found under `qdp_veins/examples/`.
 
 #### discharge
 Simplistic showcase of our preemption approach. Straight road with traffic light in the middle. RSU is used to extend the reach of beacons from emergency vehicle. 
-TODO gif.
+![GIF Demo](qdp_veins/doc/discharge2.gif)
 
 #### brno_por
-Realistic scenario of one major intersection in the city of Brno, the Czech republic. This scenario includes traffic of other vehicles which was determined using induction loop measurements from the exact area. The example contains traffic for the whole weekday. 
-TODO gif
-TODO video of real experiment
+Realistic scenario of one major intersection in the city of Brno, the Czech republic. This scenario includes traffic of other vehicles which was determined using induction loop measurements from the exact area. The example contains traffic for the whole weekday.
+![GIF Demo](qdp_veins/doc/brno_por2.gif)
+TODO video of real experiment from YT.
 
 If you decide to use this repository or parts of it, consider citing (TODO: add link). The experiment conducted in real traffic is documented in the following video: <https://drive.google.com/open?id=1IjWLiKupIz3QcSHucnmZGD9VQ-uWFXWS>.
 

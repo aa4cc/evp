@@ -4,7 +4,7 @@ Queue discharge-based emergency vehicle traffic signal preemption simulation in 
 
 ## Content of this repository
 
-This project contains modules to simulate emergency vehicle preemption approach which is based on the model of queue of vehicles (queue discharge) and V2X communication. There are also two SUMO scenarios which demonstrate this approach. See the publication for details: (TODO: add link). 
+This project contains modules to simulate emergency vehicle preemption approach which is based on the model of queue of vehicles (queue discharge) and V2X communication. There are also two SUMO scenarios which demonstrate this approach. See the publication for details and consider citing if you use any part of the repository: (TODO: add link). 
 
 ### OMNeT++ modules:
 The following modules are implemented and can be found (NED files as well as C++ implementations) in `qdp_veins/src/qdp_veins`.
@@ -17,17 +17,14 @@ The following modules are implemented and can be found (NED files as well as C++
 Files for SUMO can be found under `qdp_veins/examples/`.
 
 #### discharge
-Simplistic showcase of our preemption approach. Straight road with traffic light in the middle. RSU is used to extend the reach of beacons from emergency vehicle. 
+Simplistic showcase of our preemption approach. Straight road with traffic light in the middle. RSU is used to extend the reach of beacons from emergency vehicle. In the GIF below you can see a view from SUMO on the left and a view from OMNeT++ on the right. An emergency vehicle arrives from the left side of the road and triggers preemption.
 ![GIF Demo](qdp_veins/doc/discharge2.gif)
 
 #### brno_por
-Realistic scenario of one major intersection in the city of Brno, the Czech republic. This scenario includes traffic of other vehicles which was determined using induction loop measurements from the exact area. The example contains traffic for the whole weekday.
+Realistic scenario of one major intersection in the city of Brno, the Czech republic. This scenario includes traffic of other vehicles which was determined using induction loop measurements from the exact area. The example contains traffic for the whole weekday. In the GIF below you can see how does the simulation look like, there is an emergency vehicle coming from the east approach of the intersection and triggers a preemption program on the traffic lights. The experiment conducted in real traffic in the area of this example is documented in the following video: <https://youtu.be/WS80hyG2-rM>.
 ![GIF Demo](qdp_veins/doc/brno_por2.gif)
-TODO video of real experiment from YT.
 
-If you decide to use this repository or parts of it, consider citing (TODO: add link). The experiment conducted in real traffic is documented in the following video: <https://drive.google.com/open?id=1IjWLiKupIz3QcSHucnmZGD9VQ-uWFXWS>.
-
-## How to run simulations from this repository ##
+## How to run simulations ##
 
 You need a working installation of OMNeT++ and SUMO. The easiest way would be to use Instant Veins (virtual machine with Veins installation, see <http://veins.car2x.org/documentation/instant-veins/>). Pull this repository into the virtual machine and import this repository as a project to OMNeT++ IDE. Then right-click on the `omnetpp.ini` file from selected example and pick 'Run as' -> 'OMNeT++ Simulation'. For more information, please consult Veins, OMNeT++ and SUMO documentations and tutorials.
 

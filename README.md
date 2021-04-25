@@ -85,7 +85,7 @@ const double desired_speed = 70/3.6;    // desired speed of emergency vehicle [m
 ### Bibtex info
 If you use this code, please cite the paper as:
 
-'''
+```
 @article{obrusnik_queue_2020,
 	series = {21th {IFAC} {World} {Congress}},
 	title = {Queue discharge-based emergency vehicle traffic signal preemption⁎⁎{The} research was funded by {Technology} {Agency} of the {Czech} {Republic} within the program {Epsilon}, the project {TH03010155}.},
@@ -104,4 +104,4 @@ If you use this code, please cite the paper as:
 	keywords = {emergency vehicle preemption, intelligent transportation systems, queue modelling, traffic control},
 	pages = {14997--15002}
 }
-'''
+```

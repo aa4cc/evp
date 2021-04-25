@@ -86,22 +86,23 @@ const double desired_speed = 70/3.6;    // desired speed of emergency vehicle [m
 If you use this code, please cite the paper as:
 
 ```
-@article{obrusnik_queue_2020,
-	series = {21th {IFAC} {World} {Congress}},
-	title = {Queue discharge-based emergency vehicle traffic signal preemption⁎⁎{The} research was funded by {Technology} {Agency} of the {Czech} {Republic} within the program {Epsilon}, the project {TH03010155}.},
-	volume = {53},
-	issn = {2405-8963},
-	url = {https://www.sciencedirect.com/science/article/pii/S240589632032629X},
-	doi = {10.1016/j.ifacol.2020.12.1998},
-	abstract = {In this paper, we document a novel method for emergency vehicle preemption at an intersection controlled by traffic lights. The method relies on wireless vehicle-to-infrastructure (V2I) communication between the emergency vehicle and the traffic lights controller, availability of an accurate estimate of the number of vehicles in the queue, and a mathematical model of dynamics of discharging of the queue. Unlike some occasionally deployed methods that trigger the preemption the instant that the emergency vehicle appears at a prespecified distance from the intersection, the proposed method adapts the activation moment to the actual traffic conditions so that the preemption is as short as possible, thus reducing the impact on the other traffic. The method has been finetuned using numerical simulations in SUMO simulator and experimentally verified in real urban traffic.},
-	language = {en},
-	number = {2},
-	urldate = {2021-04-25},
-	journal = {IFAC-PapersOnLine},
+@inproceedings{obrusnik_queue_2020,
 	author = {Obrusník, Vít and Herman, Ivo and Hurák, Zdeněk},
-	month = jan,
+	title = {Queue discharge-based emergency vehicle traffic signal preemption},
+	abstract = {In this paper, we document a novel method for emergency vehicle preemption at an intersection controlled by traffic lights. The method relies on wireless vehicle-to-infrastructure (V2I) communication between the emergency vehicle and the traffic lights controller, availability of an accurate estimate of the number of vehicles in the queue, and a mathematical model of dynamics of discharging of the queue. Unlike some occasionally deployed methods that trigger the preemption the instant that the emergency vehicle appears at a prespecified distance from the intersection, the proposed method adapts the activation moment to the actual traffic conditions so that the preemption is as short as possible, thus reducing the impact on the other traffic. The method has been finetuned using numerical simulations in SUMO simulator and experimentally verified in real urban traffic.},
+	series = {21th IFAC World Congress},
+	address = {Berlin},
+	organization = {IFAC},
+	month = jul,
 	year = {2020},
+	booktitle = {{IFAC}-{PapersOnLine}},
+	volume = {53},
+	pages = {14997--15002},
+	url = {https://www.sciencedirect.com/science/article/pii/S240589632032629X},
+	urldate = {2021-04-25},
+	doi = {10.1016/j.ifacol.2020.12.1998},
+	language = {en},
+	publisher = {Elsevier},
 	keywords = {emergency vehicle preemption, intelligent transportation systems, queue modelling, traffic control},
-	pages = {14997--15002}
 }
 ```

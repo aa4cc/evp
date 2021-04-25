@@ -4,7 +4,8 @@ Queue discharge-based emergency vehicle traffic signal preemption simulation in 
 
 ## Content of this repository
 
-This project contains modules to simulate emergency vehicle preemption approach which is based on the model of queue of vehicles (queue discharge) and V2X communication. There are also two SUMO scenarios which demonstrate this approach. See the publication for details and consider citing if you use any part of the repository: (TODO: add link). 
+This is an accompanying repository for the IFAC 2020 called Queue discharge-based emergency vehicle traffic signl preemption (<https://www.sciencedirect.com/science/article/pii/S240589632032629X>). The paper proposes a new approach of emergency vehicle preemption (setting traffic lights to green for EVs) based on the size of a queue of vehicles standing in front of a stopline of an intersection and a simple model of discharging of a queue. Find the citing information at the bottom of this page.
+
 
 ### OMNeT++ modules:
 The following modules are implemented and can be found (NED files as well as C++ implementations) in `qdp_veins/src/qdp_veins`.
@@ -59,6 +60,7 @@ sim-time-limit = 25800s
 ```xml
 <!-- 25500s = 7:05 AM -->
 <!-- <vehicle id="emergency_01" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_west_to_east"/>-->
+<!-- The direction east_to_west can be seen in the YouTube video linked above and also in the gif-->
 <vehicle id="emergency_02" type="EMERGENCY_AMB" depart="25500" departSpeed="max" route="ev_route_east_to_west"/>
 ```
 and in `qdp_veins/examples/brno_por/omnetpp.ini`:
@@ -79,5 +81,27 @@ you might want to try with different `desired_speed` of emergency vehicle (or v_
 const double desired_speed = 70/3.6;    // desired speed of emergency vehicle [m/s]
 ```
 
-### Usage of these modules in different scenarios ###
-TODO description
+
+### Bibtex info
+If you use this code, please cite the paper as:
+
+'''
+@article{obrusnik_queue_2020,
+	series = {21th {IFAC} {World} {Congress}},
+	title = {Queue discharge-based emergency vehicle traffic signal preemption⁎⁎{The} research was funded by {Technology} {Agency} of the {Czech} {Republic} within the program {Epsilon}, the project {TH03010155}.},
+	volume = {53},
+	issn = {2405-8963},
+	url = {https://www.sciencedirect.com/science/article/pii/S240589632032629X},
+	doi = {10.1016/j.ifacol.2020.12.1998},
+	abstract = {In this paper, we document a novel method for emergency vehicle preemption at an intersection controlled by traffic lights. The method relies on wireless vehicle-to-infrastructure (V2I) communication between the emergency vehicle and the traffic lights controller, availability of an accurate estimate of the number of vehicles in the queue, and a mathematical model of dynamics of discharging of the queue. Unlike some occasionally deployed methods that trigger the preemption the instant that the emergency vehicle appears at a prespecified distance from the intersection, the proposed method adapts the activation moment to the actual traffic conditions so that the preemption is as short as possible, thus reducing the impact on the other traffic. The method has been finetuned using numerical simulations in SUMO simulator and experimentally verified in real urban traffic.},
+	language = {en},
+	number = {2},
+	urldate = {2021-04-25},
+	journal = {IFAC-PapersOnLine},
+	author = {Obrusník, Vít and Herman, Ivo and Hurák, Zdeněk},
+	month = jan,
+	year = {2020},
+	keywords = {emergency vehicle preemption, intelligent transportation systems, queue modelling, traffic control},
+	pages = {14997--15002}
+}
+'''

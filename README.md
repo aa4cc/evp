@@ -4,7 +4,7 @@ Queue discharge-based emergency vehicle traffic signal preemption simulation in 
 
 ## Content of this repository
 
-This is an accompanying repository for the IFAC 2020 called Queue discharge-based emergency vehicle traffic signl preemption (<https://www.sciencedirect.com/science/article/pii/S240589632032629X>). The paper proposes a new approach of emergency vehicle preemption (setting traffic lights to green for EVs) based on the size of a queue of vehicles standing in front of a stopline of an intersection and a simple model of discharging of a queue. Find the citing information at the bottom of this page.
+This is an accompanying repository for the IFAC 2020 called Queue discharge-based emergency vehicle traffic signal preemption (<https://www.sciencedirect.com/science/article/pii/S240589632032629X>). The paper proposes a new approach of emergency vehicle preemption (setting traffic lights to green for EVs) based on the size of a queue of vehicles standing in front of a stopline of an intersection and a simple model of discharging of a queue. Find the citing information at the bottom of this page.
 
 
 ### OMNeT++ modules:
